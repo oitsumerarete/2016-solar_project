@@ -112,7 +112,7 @@ def save_statistics(space_objects, time):
     file.close()
 
 
-def process_statistics():
+def process_statistics(space_objects):
     x_star = np.array([])
     y_star = np.array([])
     v_star = np.array([])
@@ -140,9 +140,9 @@ def process_statistics():
         type_ = not type_
     ro = np.sqrt((x_star - x_planet) ** 2 + (y_star - y_planet) ** 2)
     plt.plot(ro, v_planet)
-    plt.xlabel('Расстояние, м')
+    plt.xlabel('Время, с')
     plt.ylabel('Скорость, м/с')
-    plt.title('Зависимость скорости спутника \n от расстояния до звезды')
+    plt.title('Зависимость скорости спутника \n от времени')
     plt.grid()
     plt.savefig('velocity(distance).png')
     plt.show()

@@ -1,6 +1,6 @@
 # coding: utf-8
 # license: GPLv3
-
+import numpy as np
 
 class Star:
     """Тип данных, описывающий звезду.
@@ -41,6 +41,23 @@ class Star:
     image = None
     """Изображение звезды"""
 
+    def __init__(self):
+        self.x = np.array([])
+        self.y = np.array([])
+        self.v = np.array([])
+        self.time = np.array([])
+
+    def add_x(self, x):
+        self.x = np.append(self.x, x)
+
+    def add_y(self, y):
+        self.y = np.append(self.y, y)
+
+    def add_v(self, v):
+        self.v = np.append(self.v, v)
+
+    def add_time(self, time):
+        self.time = np.append(self.time, time)
 
 class Planet:
     """Тип данных, описывающий планету.
@@ -80,3 +97,21 @@ class Planet:
 
     image = None
     """Изображение планеты"""
+
+    def __init__(self):
+        self.x = np.array([])
+        self.y = np.array([])
+        self.v = np.array([])
+        self.time = np.array([])
+
+    def add_x(self, x):
+        self.x = np.append(self.x, x)
+
+    def add_y(self, y):
+        self.y = np.append(self.y, y)
+
+    def add_v(self, v):
+        self.v = np.append(self.v, v)
+
+    def add_time(self, time):
+        self.time = np.append(self.time, time)
